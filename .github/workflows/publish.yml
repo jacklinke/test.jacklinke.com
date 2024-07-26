@@ -25,5 +25,4 @@ jobs:
         publication-host: 'test.jacklinke.com'
 
     - name: Get the output JSON
-      run: |
-      echo "${{ steps.publish.outputs.result_json }}"
+      run: echo "${{ steps.publish.outputs.result_json }}"
