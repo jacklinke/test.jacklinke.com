@@ -10,7 +10,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: tj-actions/changed-files@v44
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
 
       - uses: actions/setup-python@v5
         with:
@@ -19,9 +21,11 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Publish to Hashnode
-        uses: OmenApps/publish-github-to-hashnode@v1
+        id: publish
+        uses: OmenApps/publish-github-to-hashnode@v1.1
         with:
           access-token: ${{ secrets.HASHNODE_ACCESS_TOKEN }}
+          changed-files: ${{ steps.changed-files.outputs.all_changed_files }}
           publication-host: 'test.jacklinke.com'
 
       - name: Get the output JSON
