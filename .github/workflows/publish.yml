@@ -20,7 +20,7 @@ jobs:
 
       - name: Publish to Hashnode
         id: publish
-        uses: OmenApps/publish-github-to-hashnode@v1.3
+        uses: OmenApps/publish-github-to-hashnode@v1.4
         with:
           access-token: ${{ secrets.HASHNODE_ACCESS_TOKEN }}
           changed-files: ${{ steps.changed-files.outputs.all_changed_files }}
