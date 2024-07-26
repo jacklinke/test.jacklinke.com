@@ -1,0 +1,29 @@
+name: Publish My Test Hashnode Blog Posts
+on:
+  push:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - uses: tj-actions/changed-files@v44
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - run: pip install -r requirements.txt
+
+    - name: Publish to Hashnode
+      uses: OmenApps/publish-github-to-hashnode@v1
+      with:
+        access-token: ${{ secrets.HASHNODE_ACCESS_TOKEN }}
+        publication-host: 'test.jacklinke.com'
+
+    - name: Get the output JSON
+      run: |
+      echo "${{ steps.publish.outputs.result_json }}"
