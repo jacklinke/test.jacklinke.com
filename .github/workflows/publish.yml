@@ -27,8 +27,8 @@ jobs:
           deleted-files: ${{ steps.changed-files.outputs.deleted_files }}
           publication-host: 'test.jacklinke.com'
 
-      # - name: Get the output in JSON
-      #   run: echo "${{ steps.publish.outputs.result_json }}"
+      - name: Get the output in JSON
+        run: echo "${{ steps.publish.outputs.result_json }}"
 
-      # - name: Get the output in plain text
-      #   run: echo "${{ steps.publish.outputs.result_summary }}"
+      - name: Get the output in plain text
+        run: echo "${{ steps.publish.outputs.result_summary }}"
