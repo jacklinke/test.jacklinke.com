@@ -14,10 +14,11 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v44
 
-      - name: Debug changed files
+      - name: Convert changed files to JSON array
+        id: convert-changed-files
         run: |
-          echo "Changed files: ${{ steps.changed-files.outputs.all_changed_files }}"
-          echo "Deleted files: ${{ steps.changed-files.outputs.deleted_files }}"
+          echo "CHANGED_FILES_JSON=$(echo '[\"${{ steps.changed-files.outputs.all_changed_files }}\"]' | sed 's/ /\",\"/g')" >> $GITHUB_ENV
+          echo "DELETED_FILES_JSON=$(echo '[\"${{ steps.changed-files.outputs.deleted_files }}\"]' | sed 's/ /\",\"/g')" >> $GITHUB_ENV
 
       - uses: actions/setup-python@v5
         with:
@@ -28,8 +29,8 @@ jobs:
         uses: OmenApps/publish-github-to-hashnode@v1.7
         with:
           access-token: ${{ secrets.HASHNODE_ACCESS_TOKEN }}
-          changed-files: ${{ steps.changed-files.outputs.all_changed_files }}
-          deleted-files: ${{ steps.changed-files.outputs.deleted_files }}
+          changed-files: ${{ env.CHANGED_FILES_JSON }}
+          deleted-files: ${{ env.DELETED_FILES_JSON }}
           publication-host: 'test.jacklinke.com'
 
       - name: Get the output JSON
