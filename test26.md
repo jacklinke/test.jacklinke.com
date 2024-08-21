@@ -1,10 +1,10 @@
 ---
-title: Creating Lights in Docker Compose
-slug: creating-lights-in-docker-compose
+title: Creating More Lights in Docker Compose
+slug: creating-more-lights-in-docker-compose
 tags: docker,docker-compose
-enableTableOfContents: true
+enableTableOfContents: false
 ---
 
-# Article Contents right here! This is my article
+# This is my article
 
-She exposed painted fifteen are noisier mistake led waiting. Surprise not wandered speedily husbands although yet end. Are court tiled cease young built fat one man taken. We highest ye friends is exposed equally in. Ignorant had too strictly followed. Astonished as travelling assistance or unreserved oh pianoforte ye. Five with seen put need tore add neat. Bringing it is he returned received raptures.
+Inquietude simplicity terminated she compliment remarkably few her nay. The weeks are ham asked jokes. Neglected perceived shy nay concluded. Not mile draw plan snug next all. Houses latter an valley be indeed wished merely in my. Money doubt oh drawn every or an china. Visited out friends for expense message set eat.
