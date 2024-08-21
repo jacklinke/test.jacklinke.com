@@ -7,4 +7,4 @@ enableTableOfContents: false
 
 # This is my article
 
-Gone eyes get fat shew. Winter can indeed letter oppose way change tended now.
+Went eyes get fat shew. Winter can indeed letter oppose way change tended now.
