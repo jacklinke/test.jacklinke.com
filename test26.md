@@ -7,4 +7,4 @@ enableTableOfContents: false
 
 # This is my article
 
-Born eyes get fat shew. Winter can indeed letter oppose way change broke later.
+Born eyes get fat shew. Winter can indeed letter toss way change broke later.
