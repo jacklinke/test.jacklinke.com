@@ -24,7 +24,6 @@ jobs:
         with:
           added-files: ${{ steps.changed-files.outputs.added_files }}
           changed-files: ${{ steps.changed-files.outputs.all_changed_files }}
-          deleted-files: ${{ steps.changed-files.outputs.deleted_files }}
           access-token: ${{ secrets.HASHNODE_ACCESS_TOKEN }}
           publication-host: 'test.jacklinke.com'
 
